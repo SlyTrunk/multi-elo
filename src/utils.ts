@@ -6,7 +6,7 @@ const undecor = (a: number[]): number => a[1];
 export const argsort = (arr: number[]) =>
   arr
     .map((element, index) => decor(element, index))
-    .sort()
+    .sort((a, b) => (a[0] - b[0]))
     .map((element) => undecor(element));
 
 /**
